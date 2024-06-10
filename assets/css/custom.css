@@ -1,0 +1,30 @@
+/*
+Template Name: Velzon - Admin & Dashboard Template
+Author: Themesbrand
+Website: https://themesbrand.com/
+Contact: support@themesbrand.com
+File: Custom Css File
+*/
+
+.d-contents {
+    display: contents !important;
+}
+
+@media (max-width: 576px) {
+    .d-flex {
+        flex-direction: row;
+        align-items: flex-start; /* Align items at the top */
+    }
+
+    .ms-2 {
+        margin-left: 0.5rem;
+    }
+
+    .flex-grow-1 {
+        flex: 1;
+    }
+
+    .text-truncate {
+        white-space: normal;
+    }
+}

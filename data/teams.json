@@ -1,0 +1,92 @@
+[
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/rifqi.jpg",
+    "name": "Rifqi Ardhian",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Lead Developer"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/mahendra.jpg",
+    "name": "Mahendra Dwi Purwanto",
+    "icon": "ri-pencil-ruler-line",
+    "position": "Project Manager"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/gita.jpg",
+    "name": "Gita Kartika Pariwara",
+    "icon": "ri-pencil-ruler-line",
+    "position": "System Analyst"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/lady.jpg",
+    "name": "Lady Yuasshassa Raharjo",
+    "icon": "ri-search-eye-line",
+    "position": "Quality Assurance"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/amril.jpg",
+    "name": "Amril Azhar",
+    "icon": "ri-server-fill",
+    "position": "Backend Developer"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Zepri Adi",
+    "icon": "ri-server-fill",
+    "position": "Backend Developer"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/rian.jpg",
+    "name": "Rian Febriansyah",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Frontend Developer"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/ilmi.jpg",
+    "name": "Ilmi Kalam",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Frontend Developer"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/tria.jpg",
+    "name": "Tria Bagus Nur Taufik",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Wordpress Developer"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/rizal.jpg",
+    "name": "Rizal Lazuardi Firdaus",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Frontend Developer"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Izzati Millah Hanifah",
+    "icon": "ri-pencil-ruler-line",
+    "position": "System Analyst (Intern)"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Muthia Qurrota Akyun",
+    "icon": "ri-search-eye-line",
+    "position": "Quality Assurance (Intern)"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Ahmad Akbar",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Frontend Developer (Intern)"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Haziq Abiyyu",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Backcend Developer (Intern)"
+  },
+  {
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Yoki Rahmada Berlian",
+    "icon": "ri-code-s-slash-fill",
+    "position": "Wordpress Developer (Intern)"
+  }
+]

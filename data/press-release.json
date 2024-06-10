@@ -1,0 +1,71 @@
+[
+  {
+    "date": "10 June 2024",
+    "title": "Exciting Updates Unveiled: Discover the Latest from cmlabs Projects",
+    "description": "This month marks an exciting milestone as we unveil a multitude of updates and features across various <b>cmlabs projects</b>. Our inaugural live version is packed with a diverse range of cutting-edge enhancements. Here's a glimpse of what's included",
+    "features": [
+      {
+        "color": "info",
+        "icon": "ri-git-repository-commits-line",
+        "title": "Page Enablement Writing Services",
+        "description": "Introducing Page Enablement Writing Services – where every word is crafted to launch your online success",
+        "status": "done"
+      },
+      {
+        "color": "info",
+        "icon": "ri-git-repository-commits-line",
+        "title": "Adjustment SEO Guidelines",
+        "description": "Modify the existing SEO Guidelines to SEO References, and introduce a new menu titled 'References' to facilitate and bolster the Writer team's efforts.",
+        "status": "done"
+      },
+      {
+        "color": "success",
+        "icon": "ri-git-repository-commits-line",
+        "title": "Doodles Idul Adha",
+        "description": "Let's have a lunchtime doodle to commemorate Idul Adha!",
+        "status": "done"
+      },
+      {
+        "color": "warning",
+        "icon": "ri-git-repository-commits-line",
+        "title": "New phase development on Keyword Rank Tracker of STATS 2.0!!",
+        "description": "We are excited to announce that we are starting a new phase of development on Keyword Rank Tracker of STATS 2.0!!",
+        "status": "done"
+      },
+      {
+        "color": "primary",
+        "icon": "ri-git-repository-commits-line",
+        "title": "Continue development of VisuWisu",
+        "description": "We are near the finish line!!! just wait for us to launch it",
+        "status": "done"
+      },
+      {
+        "color": "danger",
+        "icon": "ri-git-repository-commits-line",
+        "title": "External Projects",
+        "description": "We are currently working on several external projects. With client like HRNet, AQUA, OnePets, Gnomon Watches, and many more",
+        "status": "done"
+      }
+    ],
+    "updates": [
+      "Improve Core Web Vitals of cmlabs.co",
+      "Implement cloudflare for all domain and sub domain on all projects",
+      "Enable sitemap on web analyzer",
+      "Improve user experience by introducing new features and performing maintenance on Sequence Stats 1.0."
+    ]
+  },
+  {
+    "date": "7 June 2024 - 9 June 2024",
+    "title": "Production Release Process  ",
+    "description": "We are currently in the process of releasing the latest updates and features to our production environment. The release process will take place from 7 June 2024 to 9 June 2024. During this time, there may be intermittent service disruptions. We apologize for any inconvenience this may cause and appreciate your understanding.",
+    "features": null,
+    "updates": null
+  },
+  {
+    "date": "2023 - 2024",
+    "title": "New update log will available soon!!!",
+    "description": "Wait for the new update log that will be available soon. We will update the new features and updates that we have done in the past year. Stay tuned!",
+    "features": null,
+    "updates": null
+  }
+]
