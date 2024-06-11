@@ -24,12 +24,12 @@ jobs:
 
       - name: Add cPanel to known_hosts
         run: |
-          ssh-keyscan -p 45022 chiyocreative.com >> ~/.ssh/known_hosts
+          ssh-keyscan -p 45022 developermakmurjaya.my.id >> ~/.ssh/known_hosts
 
       - name: Fetch complete history
         run: git fetch --unshallow
 
       - name: Push to cPanel
         run: |
-          git remote add cpanel ssh://chiyocre@chiyocreative.com:45022/home/chiyocre/public_html/
+          git remote add cpanel ssh://develo12@developermakmurjaya.my.id:45022/home/chiyocre/public_html/
           git push -u cpanel master --force
