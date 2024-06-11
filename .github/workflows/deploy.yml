@@ -30,7 +30,7 @@ jobs:
 
       - name: Test SSH Connection
         run: ssh -T -p 45022 develo12@developermakmurjaya.my.id
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Fetch complete history
         run: git fetch --unshallow
