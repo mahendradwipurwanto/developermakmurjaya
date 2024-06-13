@@ -16,17 +16,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        continue-on-error: false
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
+        continue-on-error: false
 
       - name: Add cPanel to known_hosts
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -p 45022 developermakmurjaya.my.id >> ~/.ssh/known_hosts
           cat ~/.ssh/known_hosts
+        continue-on-error: false
 
       - name: Test SSH Connection
         run: ssh -T -p 45022 develo12@developermakmurjaya.my.id
@@ -34,8 +37,10 @@ jobs:
 
       - name: Fetch complete history
         run: git fetch --unshallow
+        continue-on-error: false
 
       - name: Push to cPanel
         run: |
           git remote add cpanel ssh://develo12@developermakmurjaya.my.id:45022/home/develo12/public_html/
           git push -u cpanel master --force
+        continue-on-error: false
