@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'issue.duedate' => $data['issue.duedate'] ?? '',
         'issue.story.point' => $data['issue.Story Points estimate'] ?? '',
         'issue.type.name' => $data['issue.issueType.name'] ?? '',
-        'issue.project' => $data['issue.project'] ?? ''
+        'issue.project.name' => $data['issue.project.name'] ?? ''
     );
 
     //use json template-json/assignee-notification.json and replace the values with the extracted data
