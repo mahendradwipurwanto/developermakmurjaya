@@ -39,36 +39,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     logs(replaceTemplate($extractedData), 'assignee');
 
+    // URL to which the data will be sent via cURL
+    $targetUrl = 'https://chat.googleapis.com/v1/spaces/AAAAXz0fDmY/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=4yiIfP11dtsBHbS_Sri8DPt68BnL_7TBNXvd8fNiKcU';
+
+    // Initialize cURL session
+    $ch = curl_init($targetUrl);
+
+    // Configure cURL options
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+    // Execute cURL request and get the response
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        $error_msg = curl_error($ch);
+        // Handle error - for example, log it or send it back in the response
+        echo json_encode(array('error' => $error_msg));
+    } else {
+        // Send the response from the target URL back to the client
+        echo $response;
+    }
+
+    // Close cURL session
+    curl_close($ch);
+
     header('Content-Type: application/json');
     ej($template, false);
-
-    // URL to which the data will be sent via cURL
-//    $targetUrl = 'https://example.com/target-endpoint';
-//
-//    // Initialize cURL session
-//    $ch = curl_init($targetUrl);
-//
-//    // Configure cURL options
-//    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//    curl_setopt($ch, CURLOPT_POST, true);
-//    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-//    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-//
-//    // Execute cURL request and get the response
-//    $response = curl_exec($ch);
-//
-//    // Check for cURL errors
-//    if (curl_errno($ch)) {
-//        $error_msg = curl_error($ch);
-//        // Handle error - for example, log it or send it back in the response
-//        echo json_encode(array('error' => $error_msg));
-//    } else {
-//        // Send the response from the target URL back to the client
-//        echo $response;
-//    }
-//
-//    // Close cURL session
-//    curl_close($ch);
 } else {
     // Handle the case where the request method is not POST
     echo json_encode(array('error' => 'Invalid request method. Only POST requests are allowed.'));
