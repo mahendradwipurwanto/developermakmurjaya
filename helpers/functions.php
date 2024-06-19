@@ -1,5 +1,5 @@
 <?php
-function base_url($path = '')
+function base_url($path = ''): string
 {
     // Determine if the connection is secure
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
@@ -17,7 +17,7 @@ function base_url($path = '')
 }
 
 // get active path
-function active($path)
+function active($path): string
 {
     // Get the current path without the query string and the base URL
     $currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -36,4 +36,11 @@ function active($path)
     return '';
 }
 
-?>
+function ej($params = null, $encode = true){
+    if ($encode) {
+        echo json_encode($params);
+    } else {
+        echo $params;
+    }
+    exit;
+}
