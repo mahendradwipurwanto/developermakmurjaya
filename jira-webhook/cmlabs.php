@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'issue.status.name' => $data['issue.status.name'] ?? '',
         'issue.url' => $data['issue.url'] ?? '',
         'issue.QA.displayName' => $data['issue.QA.displayName'] ?? '',
-        'issue.reviewers.displayName' => $data['issue.Lead / Reviewers.displayName'] ?? '',
+        'issue.Lead / Reviewers.displayName' => $data['issue.Lead / Reviewers.displayName'] ?? '',
         'issue.duedate' => $data['issue.duedate'] ?? '',
         'issue.Story Points estimate' => $data['issue.Story Points estimate'] ?? '',
         'issue.issueType.name' => $data['issue.issueType.name'] ?? '',
