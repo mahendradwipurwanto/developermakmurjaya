@@ -1,0 +1,14 @@
+{
+  "issue.key": "{{issue.key}}",
+  "issue.assignee.displayName": "{{issue.assignee.displayName}}",
+  "issue.summary": "{{issue.summary}}",
+  "issue.reporter.displayName": "{{issue.reporter.displayName}}",
+  "issue.status.name": "{{issue.status.name}}",
+  "issue.url": "{{issue.url}}",
+  "issue.QA.displayName": "{{issue.QA.displayName}}",
+  "issue.Lead / Reviewers.displayName": "{{issue.Lead / Reviewers.displayName}}",
+  "issue.duedate": "{{issue.duedate}}",
+  "issue.Story Points estimate": "{{issue.Story Points estimate}}",
+  "issue.issueType.name": "{{issue.issueType.name}}",
+  "issue.project": "{{issue.project}}"
+}
