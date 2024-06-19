@@ -48,7 +48,11 @@
 on:
   push:
     branches:
-      - main
+      - master
+  pull_request:
+    branches:
+      - master
+
 name: 🚀 Deploy website on push
 
 jobs:
