@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     file_put_contents($filename, $data);
 
     header('Content-Type: application/json');
-    ej($data, false);
+    ej($data);
 
     // URL to which the data will be sent via cURL
 //    $targetUrl = 'https://example.com/target-endpoint';
@@ -81,4 +81,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle the case where the request method is not POST
     echo json_encode(array('error' => 'Invalid request method. Only POST requests are allowed.'));
 }
+
 
