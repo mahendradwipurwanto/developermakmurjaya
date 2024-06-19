@@ -30,14 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     //use json template-json/assignee-notification.json and replace the values with the extracted data
-    $template = file_get_contents('template-json/assignee-notification.json');
-
-    //use foreach according to the extracted data
-    foreach ($extractedData as $key => $value) {
-        $template = str_replace('{{' . $key . '}}', $value, $template);
-    }
-
-    header('Content-Type: application/json');
+//    $template = file_get_contents('template-json/assignee-notification.json');
+//
+//    //use foreach according to the extracted data
+//    foreach ($extractedData as $key => $value) {
+//        $template = str_replace('{{' . $key . '}}', $value, $template);
+//    }
 
     // create json file and then save to that file according time
     $filename = '../logs/' . date("dmY_His") . '.json';
@@ -47,9 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mkdir('../logs', 0777, true);
     }
 
-    file_put_contents($filename, $template);
+    file_put_contents($filename, $extractedData);
 
-    ej($template, false);
+    header('Content-Type: application/json');
+    ej($extractedData, false);
 
     // URL to which the data will be sent via cURL
 //    $targetUrl = 'https://example.com/target-endpoint';
@@ -82,4 +81,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle the case where the request method is not POST
     echo json_encode(array('error' => 'Invalid request method. Only POST requests are allowed.'));
 }
-?>
+
