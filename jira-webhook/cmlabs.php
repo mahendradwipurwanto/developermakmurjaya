@@ -16,12 +16,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Extract the required fields from the data
     $extractedData = array(
         'issue.key' => $data['issue.key'] ?? '',
-        'issue.google.id' => $data['issue.google.id'] ?? '',
         'issue.assignee.displayName' => $data['issue.assignee.displayName'] ?? '',
         'summary' => $data['issue.summary'] ?? '',
         'reporter.display.displayName' => $data['issue.reporter.displayName'] ?? '',
         'issue.status.name' => $data['issue.status.name'] ?? '',
-        'issue.url' => $data['issue.url'] ?? ''
+        'issue.url' => $data['issue.url'] ?? '',
+        'issue.qa.displayName' => $data['issue.QA.displayName'] ?? '',
+        'issue.reviewers.displayName' => $data['issue.Lead / Reviewers.displayName'] ?? '',
+        'issue.duedate' => $data['issue.duedate'] ?? '',
+        'issue.story.point' => $data['issue.Story Points estimate'] ?? '',
+        'issue.type.name' => $data['issue.issueType.name'] ?? '',
+        'issue.project' => $data['issue.project'] ?? ''
     );
 
     //use json template-json/assignee-notification.json and replace the values with the extracted data
