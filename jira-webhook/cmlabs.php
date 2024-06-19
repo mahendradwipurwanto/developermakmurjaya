@@ -45,10 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mkdir('../logs', 0777, true);
     }
 
-    file_put_contents($filename, $data);
+    file_put_contents($filename, $extractedData);
 
     header('Content-Type: application/json');
-    ej($data);
+    ej($extractedData, false);
 
     // URL to which the data will be sent via cURL
 //    $targetUrl = 'https://example.com/target-endpoint';
