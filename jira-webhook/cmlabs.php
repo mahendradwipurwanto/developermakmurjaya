@@ -36,6 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // create json file and then save to that file according time
     $filename = '../logs/' . date("dmY_His") . '.json';
+
+    //check if path exists, if not created the folder
+    if (!file_exists('../logs')) {
+        mkdir('../logs', 0777, true);
+    }
+
     file_put_contents($filename, $template);
 
     ej($template, false);
