@@ -10,5 +10,5 @@
   "issue.duedate": "{{issue.duedate}}",
   "issue.Story Points estimate": "{{issue.Story Points estimate}}",
   "issue.issueType.name": "{{issue.issueType.name}}",
-  "issue.project": "{{issue.project}}"
+  "issue.project.name": "{{issue.project.name}}"
 }
