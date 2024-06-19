@@ -1,49 +1,4 @@
-#name: Deploy
-#
-#on:
-#  push:
-#    branches:
-#      - master
-#  pull_request:
-#    branches:
-#      - master
-#
-#jobs:
-#  deploy:
-#    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.base.ref == 'master')
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v2
-#        continue-on-error: false
-#
-#      - name: Set up SSH
-#        uses: webfactory/ssh-agent@v0.5.3
-#        with:
-#          ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
-#        continue-on-error: false
-#
-#      - name: Add cPanel to known_hosts
-#        run: |
-#          mkdir -p ~/.ssh
-#          ssh-keyscan -p 45022 developermakmurjaya.my.id >> ~/.ssh/known_hosts
-#          cat ~/.ssh/known_hosts
-#        continue-on-error: false
-#
-#      - name: Test SSH Connection
-#        run: ssh -T -p 45022 develo12@developermakmurjaya.my.id
-#        continue-on-error: false
-#
-#      - name: Fetch complete history
-#        run: git fetch --unshallow
-#        continue-on-error: false
-#
-#      - name: Push to cPanel
-#        run: |
-#          git remote add cpanel ssh://develo12@developermakmurjaya.my.id:45022/home/develo12/public_html/
-#          git push -u cpanel master --force
-#        continue-on-error: false
+name: Deploy
 
 on:
   push:
@@ -53,22 +8,67 @@ on:
     branches:
       - master
 
-name: 🚀 Deploy website on push
-
 jobs:
-  web-deploy:
-    name: 🎉 Deploy website
+  deploy:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.base.ref == 'master')
     runs-on: ubuntu-latest
-    steps:
-      # Checkout the repository
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v4
 
-      # Sync files via FTP
-      - name: 📂 Sync files via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        continue-on-error: false
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          exclude: "[assets/libs/*, assets/js/pages/*]"
+          ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
+        continue-on-error: false
+
+      - name: Add cPanel to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 45022 developermakmurjaya.my.id >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
+        continue-on-error: false
+
+      - name: Test SSH Connection
+        run: ssh -T -p 45022 develo12@developermakmurjaya.my.id
+        continue-on-error: false
+
+      - name: Fetch complete history
+        run: git fetch --unshallow
+        continue-on-error: false
+
+      - name: Push to cPanel
+        run: |
+          git remote add cpanel ssh://develo12@developermakmurjaya.my.id:45022/home/develo12/public_html/
+          git push -u cpanel master --force
+        continue-on-error: false
+
+#on:
+#  push:
+#    branches:
+#      - master
+#  pull_request:
+#    branches:
+#      - master
+#
+#name: 🚀 Deploy website on push
+#
+#jobs:
+#  web-deploy:
+#    name: 🎉 Deploy website
+#    runs-on: ubuntu-latest
+#    steps:
+#      # Checkout the repository
+#      - name: 🚚 Get latest code
+#        uses: actions/checkout@v4
+#
+#      # Sync files via FTP
+#      - name: 📂 Sync files via FTP
+#        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+#        with:
+#          server: ${{ secrets.FTP_SERVER }}
+#          username: ${{ secrets.FTP_USER }}
+#          password: ${{ secrets.FTP_PASS }}
+#          exclude: "[assets/libs/*, assets/js/pages/*]"
