@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Asia/Jakarta');
+
 // Include the functions.php file
 require_once '../helpers/functions.php';
 
@@ -31,6 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     header('Content-Type: application/json');
+
+    // create json file and then save to that file according time
+    $filename = '../logs/' . date("dmY_His") . '.json';
+    file_put_contents($filename, $template);
+
     ej($template, false);
 
     // URL to which the data will be sent via cURL
