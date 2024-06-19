@@ -17,15 +17,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $extractedData = array(
         'issue.key' => $data['issue.key'] ?? '',
         'issue.assignee.displayName' => $data['issue.assignee.displayName'] ?? '',
-        'summary' => $data['issue.summary'] ?? '',
-        'reporter.display.displayName' => $data['issue.reporter.displayName'] ?? '',
+        'issue.summary' => $data['issue.summary'] ?? '',
+        'issue.reporter.displayName' => $data['issue.reporter.displayName'] ?? '',
         'issue.status.name' => $data['issue.status.name'] ?? '',
         'issue.url' => $data['issue.url'] ?? '',
-        'issue.qa.displayName' => $data['issue.QA.displayName'] ?? '',
+        'issue.QA.displayName' => $data['issue.QA.displayName'] ?? '',
         'issue.reviewers.displayName' => $data['issue.Lead / Reviewers.displayName'] ?? '',
         'issue.duedate' => $data['issue.duedate'] ?? '',
-        'issue.story.point' => $data['issue.Story Points estimate'] ?? '',
-        'issue.type.name' => $data['issue.issueType.name'] ?? '',
+        'issue.Story Points estimate' => $data['issue.Story Points estimate'] ?? '',
+        'issue.issueType.name' => $data['issue.issueType.name'] ?? '',
         'issue.project.name' => $data['issue.project.name'] ?? ''
     );
 
