@@ -30,22 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     //use json template-json/assignee-notification.json and replace the values with the extracted data
-    $template = file_get_contents('template-json/logs.json');
+    $template = file_get_contents('template-json/assignee-notification.json');
 
     //use foreach according to the extracted data
     foreach ($extractedData as $key => $value) {
         $template = str_replace('{{' . $key . '}}', $value, $template);
     }
 
-    // create json file and then save to that file according time
-    $filename = '../logs/' . date("dmY_His") . '.json';
-
-    //check if path exists, if not created the folder
-    if (!file_exists('../logs')) {
-        mkdir('../logs', 0777, true);
-    }
-
-    file_put_contents($filename, $template);
+    logs(replaceTemplate($extractedData), 'assignee');
 
     header('Content-Type: application/json');
     ej($template, false);

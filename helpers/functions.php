@@ -44,3 +44,35 @@ function ej($params = null, $encode = true){
     }
     exit;
 }
+
+//function replace template log
+function replaceTemplate($data): string
+{
+    //use json template-json/assignee-notification.json and replace the values with the extracted data
+    $template = file_get_contents('template-json/logs.json');
+
+    //use foreach according to the extracted data
+    foreach ($data as $key => $value) {
+        $template = str_replace('{{' . $key . '}}', $value, $template);
+    }
+
+    return $template;
+}
+
+//function logs
+function logs($data, $filename = 'logs'): bool
+{
+    // Create a new log file with the current date and time
+    $filename = '../logs/' . $filename . '_' . date("dmY_His") . '.json';
+
+    // Check if the logs directory exists
+    if (!file_exists('../logs')) {
+        // If not, create the logs directory
+        mkdir('../logs', 0777, true);
+    }
+
+    // Write the data to the log file
+    file_put_contents($filename, $data);
+
+    return true;
+}
