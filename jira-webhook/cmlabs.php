@@ -58,10 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (curl_errno($ch)) {
         $error_msg = curl_error($ch);
         // Handle error - for example, log it or send it back in the response
-        echo json_encode(array('error' => $error_msg));
-    } else {
-        // Send the response from the target URL back to the client
-        echo $response;
+        // log
+        logs($error_msg, 'error');
     }
 
     // Close cURL session
