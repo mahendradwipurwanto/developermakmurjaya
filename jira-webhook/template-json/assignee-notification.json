@@ -55,7 +55,7 @@
               {
                 "decoratedText": {
                   "icon": {
-                    "knownIcon": "CLOCK"
+                    "knownIcon": "EVENT_SEAT"
                   },
                   "topLabel": "Reviewers",
                   "text": "{{issue.Lead / Reviewers.displayName}}"
@@ -67,7 +67,7 @@
               {
                 "decoratedText": {
                   "icon": {
-                    "knownIcon": "CLOCK"
+                    "knownIcon": "MEMBERSHIP"
                   },
                   "topLabel": "Quality Assurance",
                   "text": "{{issue.QA.displayName}}"
@@ -79,7 +79,7 @@
               {
                 "decoratedText": {
                   "icon": {
-                    "knownIcon": "CLOCK"
+                    "knownIcon": "INVITE"
                   },
                   "topLabel": "Due Date",
                   "text": "{{issue.duedate}}"
