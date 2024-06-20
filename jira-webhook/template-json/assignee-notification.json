@@ -57,9 +57,36 @@
                   "icon": {
                     "knownIcon": "CLOCK"
                   },
+                  "topLabel": "Reviewers",
+                  "text": "{{issue.Lead / Reviewers.displayName}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "CLOCK"
+                  },
+                  "topLabel": "Quality Assurance",
+                  "text": "{{issue.QA.displayName}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "CLOCK"
+                  },
                   "topLabel": "Due Date",
                   "text": "{{issue.duedate}}"
                 }
+              },
+              {
+                "divider": {}
               },
               {
                 "decoratedText": {

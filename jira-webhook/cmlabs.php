@@ -34,18 +34,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //use foreach according to the extracted data
     foreach ($extractedData as $key => $value) {
+
+        // check if $key is issue.duedate then format the date
         if ($key == 'issue.duedate') {
             if (empty($value)) {
                 $template = str_replace('{{' . $key . '}}', "-", $template);
                 continue;
             }
+
             $value = date('d F Y', strtotime($value));
             $template = str_replace('{{' . $key . '}}', $value, $template);
             continue;
         }
+
+        // check if $key is issue.Story Points estimate then replace 0 as default state
         if ($key == 'issue.Story Points estimate' && empty($value)) {
             $template = str_replace('{{' . $key . '}}', 0, $template);
             continue;
+        }
+
+        // check if $value is empty then replace - as default state
+        if (empty($value)) {
+            $value = "-";
         }
 
         $template = str_replace('{{' . $key . '}}', $value, $template);
