@@ -94,7 +94,7 @@
                     "knownIcon": "FLIGHT_ARRIVAL"
                   },
                   "topLabel": "Status",
-                  "text": "{{issue.status.name}} - {{issue.Story Points estimate}} SP"
+                  "text": "{{issue.status.name}} - {{issue.Story Points estimate}} Story Points"
                 }
               },
               {
@@ -112,8 +112,7 @@
                     {
                       "text": "View Task",
                       "icon": {
-                        "knownIcon": "BOOKMARK",
-                        "altText": "View Task"
+                        "iconUrl": "https://i.ibb.co.com/28qH9dC/icons8-external-link-480.png"
                       },
                       "onClick": {
                         "openLink": {
