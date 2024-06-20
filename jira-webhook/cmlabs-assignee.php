@@ -62,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $google_id .= getGoogleId($name) . ', ';
             }
             $template = str_replace('{{issue.google.id}}', rtrim($google_id, ', '), $template);
-            continue;
         }
 
         // check if $value is empty then replace - as default state
