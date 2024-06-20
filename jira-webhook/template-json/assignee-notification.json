@@ -57,7 +57,7 @@
                   "icon": {
                     "knownIcon": "CLOCK"
                   },
-                  "topLabel": "Status",
+                  "topLabel": "Due Date",
                   "text": "{{issue.duedate}}"
                 }
               },

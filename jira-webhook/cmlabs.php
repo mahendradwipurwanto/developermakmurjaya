@@ -34,6 +34,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //use foreach according to the extracted data
     foreach ($extractedData as $key => $value) {
+        if ($key == 'issue.duedate' && empty($value)) {
+            $template = str_replace('{{' . $key . '}}', "-", $template);
+            continue;
+        }
+        if ($key == 'issue.Story Points estimate' && empty($value)) {
+            $template = str_replace('{{' . $key . '}}', 0, $template);
+            continue;
+        }
+
         $template = str_replace('{{' . $key . '}}', $value, $template);
     }
 
