@@ -46,10 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ch = curl_init($targetUrl);
 
     // Configure cURL options
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $template);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
     // Execute cURL request and get the response
     $response = curl_exec($ch);
@@ -61,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // log
         logs($error_msg, 'error');
     }
+
 
     // Close cURL session
     curl_close($ch);
