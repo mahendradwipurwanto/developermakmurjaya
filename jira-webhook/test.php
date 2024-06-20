@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'project' => 'cmlabs',
         'url' => $env['TEST_WEBHOOK_URL'] ?? null,
         'logo' => $env['CMLABS_WEBHOOK_LOGO'] ?? null,
-        'template' => file_get_contents('../data/template-json/assignee-notification.json')
+        'template' => file_get_contents('../data/template-json/test.json')
     ];
 
     $result = webhook($data, $webhook_data);

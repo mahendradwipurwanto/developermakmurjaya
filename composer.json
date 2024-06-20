@@ -1,0 +1,15 @@
+{
+    "name": "mahendradwipurwanto/developermakmurjaya",
+    "autoload": {
+        "psr-4": {
+            "Mahendradwipurwanto\\Developermakmurjaya\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mahendradwipurwanto",
+            "email": "mahendradwipurwanto@gmail.com"
+        }
+    ],
+    "require": {}
+}

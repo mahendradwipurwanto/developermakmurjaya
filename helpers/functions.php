@@ -187,3 +187,53 @@ function curlGoogleChat($targetUrl, $template)
 
     return $response;
 }
+
+// create function to store key value to a json file with format key: value
+function storeThreadIdByJiraKey($key, $value): bool
+{
+    $filename = "notifications_data.json";
+
+    // make folder path by parent folder year then month then date make it like logs/Y/m/d
+    $folder = "../data/" . date('Y/m/d/') .$filename;
+
+    // Check if the logs directory exists
+    if (!file_exists($folder)) {
+        // If not, create the logs directory
+        mkdir($folder, 0777, true);
+    }
+
+    // input key value to json file with new line after previous data but check if key already exist skip if not exist then input new line
+    file_put_contents($folder, $key . ': ' . $value . PHP_EOL, FILE_APPEND);
+
+    return true;
+}
+
+// create function to get value by key from json file
+function getThreadIdByJiraKey($key): string
+{
+    $filename = "notifications_data.json";
+
+    // make folder path by parent folder year then month then date make it like logs/Y/m/d
+    $folder = "../data/" . date('Y/m/d/') .$filename;
+
+    // Get the contents of the notifications_data.json file
+    $data = file_get_contents($folder);
+
+    // Explode the data by new line
+    $data = explode(PHP_EOL, $data);
+
+    // Loop through the data array
+    foreach ($data as $line) {
+        // Explode the line by colon
+        $line = explode(': ', $line);
+
+        // Check if the key matches the given key
+        if ($line[0] == $key) {
+            // If true, return the value
+            return $line[1];
+        }
+    }
+
+    // If false, return an empty string
+    return '';
+}
