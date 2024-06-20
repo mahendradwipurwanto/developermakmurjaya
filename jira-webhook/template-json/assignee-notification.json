@@ -5,7 +5,7 @@
       "cardId": "{{issue.key}}",
       "card": {
         "header": {
-          "title": "New Task Assigned",
+          "title": "[{{issue.project.name}}] Task Assigned 🗃️",
           "subtitle": "{{issue.assignee.displayName}} You got new task that need to be done 💪",
           "imageUrl": "https://lh3.googleusercontent.com/proxy/LASfGKfKJAcrbrYyJrg3Z5WzYXlBhk4K5Up_x3CcV6m1bDoJDwkkaNVXw0pIYqblVGwXNzth284b3Qd8Yp0U6RIzIk0UQFYdeoHOgo6-5Z9nSOYXciqDZtTohknEUqyB",
           "imageType": "CIRCLE"
@@ -14,7 +14,7 @@
           {
             "header": "Task Overview",
             "collapsible": true,
-            "uncollapsibleWidgetsCount": 3,
+            "uncollapsibleWidgetsCount": 2,
             "widgets": [
               {
                 "decoratedText": {
@@ -55,10 +55,19 @@
               {
                 "decoratedText": {
                   "icon": {
+                    "knownIcon": "CLOCK"
+                  },
+                  "topLabel": "Status",
+                  "text": "{{issue.duedate}}"
+                }
+              },
+              {
+                "decoratedText": {
+                  "icon": {
                     "knownIcon": "FLIGHT_ARRIVAL"
                   },
                   "topLabel": "Status",
-                  "text": "{{issue.status.name}}"
+                  "text": "{{issue.status.name}} - {{issue.Story Points estimate}} SP"
                 }
               },
               {

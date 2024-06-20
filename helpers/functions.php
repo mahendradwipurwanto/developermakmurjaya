@@ -63,16 +63,19 @@ function replaceTemplate($data): string
 function logs($data, $filename = 'logs'): bool
 {
     // Create a new log file with the current date and time
-    $filename = '../logs/' . $filename . '_' . date("dmY_His") . '.json';
+    $filename = $filename . '_' . date("dmY_His") . '.json';
+
+    // make folder path by parent folder year then month then date make it like logs/Y/m/d
+    $folder = '../logs/' . date('Y/m/d/');
 
     // Check if the logs directory exists
-    if (!file_exists('../logs')) {
+    if (!file_exists($folder)) {
         // If not, create the logs directory
-        mkdir('../logs', 0777, true);
+        mkdir($folder, 0777, true);
     }
 
     // Write the data to the log file
-    file_put_contents($filename, $data);
+    file_put_contents($folder."/".$filename, $data);
 
     return true;
 }
