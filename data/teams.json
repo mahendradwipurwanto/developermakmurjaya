@@ -1,11 +1,12 @@
 [
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "107436216759879719550",
+    "jira_name": "Rifqi Ardhian",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/rifqi.jpg",
     "name": "Rifqi Ardhian",
     "icon": "ri-code-s-slash-fill",
-    "position": "Lead Developer"
+    "position": "Lead Developer",
+    "display": true
   },
   {
     "google_id": "113557657841942365872",
@@ -13,110 +14,151 @@
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/mahendra.jpg",
     "name": "Mahendra Dwi Purwanto",
     "icon": "ri-pencil-ruler-line",
-    "position": "Project Manager"
+    "position": "Project Manager",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "107125119985431403536",
+    "jira_name": "Gita Kartika",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/gita.jpg",
     "name": "Gita Kartika Pariwara",
     "icon": "ri-pencil-ruler-line",
-    "position": "System Analyst"
+    "position": "System Analyst",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "106884081685151078695",
+    "jira_name": "Lady Yuasshassa",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/lady.jpg",
     "name": "Lady Yuasshassa Raharjo",
     "icon": "ri-search-eye-line",
-    "position": "Quality Assurance"
+    "position": "Quality Assurance",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "101458509306301106139",
+    "jira_name": "Amril Azhar",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/amril.jpg",
     "name": "Amril Azhar",
     "icon": "ri-server-fill",
-    "position": "Backend Developer"
+    "position": "Backend Developer",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
-    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "google_id": "100520707746490440436",
+    "jira_name": "Zepri Adi",
+    "photo": "https://media.licdn.com/dms/image/D5603AQEDW9ZDwG9edw/profile-displayphoto-shrink_100_100/0/1688420333772?e=1724284800&v=beta&t=PHSWhpMI4qk-lhsKPMrc2FTtu6Z4fwEGyGA5DXiZG7M",
     "name": "Zepri Adi",
     "icon": "ri-server-fill",
-    "position": "Backend Developer"
+    "position": "Backend Developer",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "102461853092867495395",
+    "jira_name": "Rian Febriansyah",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/rian.jpg",
     "name": "Rian Febriansyah",
     "icon": "ri-code-s-slash-fill",
-    "position": "Frontend Developer"
+    "position": "Frontend Developer",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "109673715810849233321",
+    "jira_name": "Ilmi Kalam",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/ilmi.jpg",
     "name": "Ilmi Kalam",
     "icon": "ri-code-s-slash-fill",
-    "position": "Frontend Developer"
+    "position": "Frontend Developer",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "117771527877200540741",
+    "jira_name": "Tria Bagus",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/tria.jpg",
     "name": "Tria Bagus Nur Taufik",
     "icon": "ri-code-s-slash-fill",
-    "position": "Wordpress Developer"
+    "position": "Wordpress Developer",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
+    "google_id": "112511016702338301164",
+    "jira_name": "Rizal Lazuardi",
     "photo": "https://storage.googleapis.com/developer-cmlabs/profile/rizal.jpg",
     "name": "Rizal Lazuardi Firdaus",
     "icon": "ri-code-s-slash-fill",
-    "position": "Frontend Developer"
+    "position": "Frontend Developer",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
-    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "google_id": "105954415063394754418",
+    "jira_name": "Talita Nur Saiddah",
+    "photo": "https://lh3.googleusercontent.com/a-/ALV-UjWV-x0GyYg9Uj3-EdS6gLyWWZshh2yFVM2GK1GSeLBOvK9HBeQ=s88-w88-h88-c-k-no",
+    "name": "Talita Nur Saiddah",
+    "icon": "ri-palette-line",
+    "position": "UI/UX Designer",
+    "display": false
+  },
+  {
+    "google_id": "106614842714183762613",
+    "jira_name": "Izzati Millah Hanifah",
+    "photo": "https://lh3.googleusercontent.com/a-/ALV-UjVkqo2eltp1vIubW7AjlsnlgPzDquPj3vP2bEwguSWuR4lTYqB9Fw=s88-w88-h88-c-k-no",
     "name": "Izzati Millah Hanifah",
     "icon": "ri-pencil-ruler-line",
-    "position": "System Analyst (Intern)"
+    "position": "System Analyst (Intern)",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
-    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "google_id": "100649915411312876020",
+    "jira_name": "Muthia Qurrota Akyun",
+    "photo": "https://lh3.googleusercontent.com/a-/ALV-UjV-EzpWQ0Zrsu3MwV4hM3_wT7J6RSohuMDcAelPP85WzqTQqZe9SNOXMIhHA5cYtK8cJTHcv14kyH2s9ug2mfsaH0pwNdC9GpKVDeD7QwvVBreCq47v40A99QHl4sq66119zvpTZvfNhhG2SXMUSyFjWZYTLMuJSOp4V3hI1mNDw_U6aZcYhAfljSv2cxiy8hPN1o4eLWCYYynH2OohOyP68CnY4FpbzUrXac67O7aPLxA40EYwuRvLN38iIWuT0-RMcqEzmG7P7d-e-QuYwm98W44_OIfxU5WpBBvjRHBmMPbMZO4dg8FzUjbrwtHkOGO7Rci6rN57OIsdxh3CVg98HyD7YrD1DdCpsMgnvKLY_EFYXiA7mNB-UU9aw7lTEPLqj0xg3gPVyxQHYws6-v20gx_dXFeOgeO8wRLXsysiNbm3yUio5inywN57i8Ab5_hKP4T9NtUh1m_rPZzKK4RmYDvRWWPgXIDrrutNHZi9fAMQvZ5aqWNYQy4-FVTZuf_zmhIFvmm0uaPeFEnMPInk317jG7ljqEbvwfKcmvxbwl0WY7_1PKOrxnwSGvh6FcKGvAbLabmxqEvZAznGVp23xbIKwYqBjFLAfSK7KBsZmhbmMEsYDWfq8EPAtXYmylJMuP8hx47ZpXINsmOTCGnX1efV7PflbQS1q05y9mAyUahfqwu11b3VpMDJLS0xzGZemt0cceYC9IAhKrksSpyV6frCJ7cJlEH6sH5fj2VVoU8DZfQqxsj5MF7clQVlO0wyKcwuZACVXS1acD9rJIYHMQK1c753xPPe7_I8UBdy-UI9MDXqXbe6QilMB6U2ZiE4xQhyra2-Pucvn0gVNhzX2Pydq2uDF4Ql6Wp4Lp2gtyhXtLLx7bFhxLw7bVMj93o3BXU0l1wtpm7D6RiZhIe1HoBoXLDErqVmX30ql5uUZm-0HjHKlzmLFjxz8pons8bIRb9t7LaE9lkz8usPgLCXlIM=s88-w88-h88-c-k-no",
     "name": "Muthia Qurrota Akyun",
     "icon": "ri-search-eye-line",
-    "position": "Quality Assurance (Intern)"
+    "position": "Quality Assurance (Intern)",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
-    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
-    "name": "Ahmad Akbar",
+    "google_id": "110945769725394220392",
+    "jira_name": "Ahmad Akbar Mubarak",
+    "photo": "https://lh3.googleusercontent.com/a-/ALV-UjUfNMe9OYKvJCm2lIOxkW5xK-csCrad1twFyGHSoQ5VK9p2meU=s88-w88-h88-c-k-no",
+    "name": "Ahmad Akbar Mubarak",
     "icon": "ri-code-s-slash-fill",
-    "position": "Frontend Developer (Intern)"
+    "position": "Frontend Developer (Intern)",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
-    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "google_id": "116676913098304056240",
+    "jira_name": "Haziq Abiyyu",
+    "photo": "https://lh3.googleusercontent.com/a-/ALV-UjUd28EQ1NWYImnOSvuvBhSeuXU-sc0dxxfmGjBjulJYfp1QL6k=s88-w88-h88-c-k-no",
     "name": "Haziq Abiyyu",
     "icon": "ri-code-s-slash-fill",
-    "position": "Backcend Developer (Intern)"
+    "position": "Backend Developer (Intern)",
+    "display": true
   },
   {
-    "google_id": "",
-    "jira_name": "",
-    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "google_id": "118170108411199671175",
+    "jira_name": "Yoki Rahmada Berlian",
+    "photo": "https://lh3.googleusercontent.com/a-/ALV-UjXNoV3ILqph9URp7NBmNJTmVo1PwYyot7fy6PQh_B45shdQeiRC=s88-w88-h88-c-k-no",
     "name": "Yoki Rahmada Berlian",
     "icon": "ri-code-s-slash-fill",
-    "position": "Wordpress Developer (Intern)"
+    "position": "WP Developer (Intern)",
+    "display": true
+  },
+  {
+    "google_id": null,
+    "jira_name": "Al Mulki",
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Al Mulki",
+    "icon": "ri-palette-line",
+    "position": "UI/UX Designer (Intern)",
+    "display": false
+  },
+  {
+    "google_id": null,
+    "jira_name": "Jasmine",
+    "photo": "https://storage.googleapis.com/developer-cmlabs/profile/default.png",
+    "name": "Jasmine",
+    "icon": "ri-palette-line",
+    "position": "UI/UX Designer (Intern)",
+    "display": false
   }
 ]

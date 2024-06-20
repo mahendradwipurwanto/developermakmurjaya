@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     //use json template-json/assignee-notification.json and replace the values with the extracted data
-    $template = file_get_contents('../data/template-json/assignee-notification.json');
+    $template = file_get_contents('../data/template-json/testing-notification.json');
 
     //use foreach according to the extracted data
     foreach ($extractedData as $key => $value) {
@@ -40,21 +40,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $template = replaceAttrJira($extractedData, $template);
 
         // replace key issue.google.id with get google id, if there is 2 name split by comma, then get google id by name of each name get from issue.assignee.displayName
-        if ($key == 'issue.assignee.displayName') {
+        if ($key == 'issue.QA.displayName') {
             $template = str_replace('{{issue.google.id}}', mentionUsers($value), $template);
         }
 
         $template = str_replace('{{' . $key . '}}', $value, $template);
     }
 
-    logs(replaceTemplate($extractedData), 'assignee');
+    logs(replaceTemplate($extractedData), 'testing');
 
     // URL to which the data will be sent via cURL
     $targetUrl = 'https://chat.googleapis.com/v1/spaces/AAAAXz0fDmY/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=4yiIfP11dtsBHbS_Sri8DPt68BnL_7TBNXvd8fNiKcU';
 
     $response = curlGoogleChat($targetUrl, $template);
 
-    ej($response, false);;
+    ej($response, false);
 } else {
     // Handle the case where the request method is not POST
     echo json_encode(array('error' => 'Invalid request method. Only POST requests are allowed.'));

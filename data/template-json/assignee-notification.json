@@ -1,5 +1,5 @@
 {
-  "text": "📄 Hai, {{issue.google.id}} Kindly check your new assignment",
+  "text": "📄 Hai {{issue.google.id}} Kindly check your new assignment",
   "cardsV2": [
     {
       "cardId": "{{issue.key}}",
