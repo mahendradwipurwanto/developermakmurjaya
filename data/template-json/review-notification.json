@@ -1,0 +1,132 @@
+{
+  "text": "🔍 Hai, {{issue.google.id}} Kindly check this task for review",
+  "cardsV2": [
+    {
+      "cardId": "{{issue.key}}",
+      "card": {
+        "header": {
+          "title": "[{{issue.project.name}}] Task Review 🗃️",
+          "subtitle": "{{issue.Lead / Reviewers.displayName}} You got a task that need to review 💪",
+          "imageUrl": "https://lh5.googleusercontent.com/proxy/Qva8zmBJf3I9I1cQITrRWZU5CWS6wvVG94iPibruvJQUIQUo_7wrzOzs1ErRtAoD8s45bHyhQhT0cdxH5GdRFhBmdSVdViHmDF0Tm6OIJO83Ru_zJFfnLfg_6PiwpkT7HZmqtVjCviAogzfQd8BNBOmqd8q5n1mQ5MwLW6sHsw",
+          "imageType": "CIRCLE"
+        },
+        "sections": [
+          {
+            "header": "Task Overview",
+            "collapsible": true,
+            "uncollapsibleWidgetsCount": 2,
+            "widgets": [
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "DESCRIPTION"
+                  },
+                  "topLabel": "Summary",
+                  "text": "{{issue.summary}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "TICKET"
+                  },
+                  "topLabel": "Reported By",
+                  "text": "{{issue.reporter.displayName}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "PERSON"
+                  },
+                  "topLabel": "Assigned To",
+                  "text": "{{issue.assignee.displayName}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "EVENT_SEAT"
+                  },
+                  "topLabel": "Reviewers",
+                  "text": "{{issue.Lead / Reviewers.displayName}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "MEMBERSHIP"
+                  },
+                  "topLabel": "Quality Assurance",
+                  "text": "{{issue.QA.displayName}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "INVITE"
+                  },
+                  "topLabel": "Due Date",
+                  "text": "{{issue.duedate}}"
+                }
+              },
+              {
+                "divider": {}
+              },
+              {
+                "decoratedText": {
+                  "icon": {
+                    "knownIcon": "FLIGHT_ARRIVAL"
+                  },
+                  "topLabel": "Status",
+                  "text": "{{issue.status.name}} - {{issue.Story Points estimate}} Story Points"
+                }
+              },
+              {
+                "divider": {}
+              }
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "widgets": [
+              {
+                "buttonList": {
+                  "buttons": [
+                    {
+                      "text": "Review Task",
+                      "icon": {
+                        "iconUrl": "https://i.ibb.co.com/28qH9dC/icons8-external-link-480.png"
+                      },
+                      "onClick": {
+                        "openLink": {
+                          "url": "{{issue.url}}"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

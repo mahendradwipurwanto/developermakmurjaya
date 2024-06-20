@@ -36,7 +36,8 @@ function active($path): string
     return '';
 }
 
-function ej($params = null, $encode = true){
+function ej($params = null, $encode = true)
+{
     if ($encode) {
         echo json_encode($params);
     } else {
@@ -49,7 +50,7 @@ function ej($params = null, $encode = true){
 function replaceTemplate($data): string
 {
     //use json template-json/assignee-notification.json and replace the values with the extracted data
-    $template = file_get_contents('template-json/logs.json');
+    $template = file_get_contents('../data/template-json/logs.json');
 
     //use foreach according to the extracted data
     foreach ($data as $key => $value) {
@@ -75,7 +76,29 @@ function logs($data, $filename = 'logs'): bool
     }
 
     // Write the data to the log file
-    file_put_contents($folder."/".$filename, $data);
+    file_put_contents("{$folder}/{$filename}", $data);
 
     return true;
+}
+
+//function to extract google_id from teams.json by jira_name
+function getGoogleId($jira_name): string
+{
+    // Get the contents of the teams.json file
+    $teams = file_get_contents('../data/teams.json');
+
+    // Decode the JSON data to a PHP array
+    $teams = json_decode($teams, true);
+
+    // Loop through the teams array
+    foreach ($teams as $team) {
+        // Check if the jira_name matches the given jira_name
+        if ($team['jira_name'] == $jira_name) {
+            // If true, return the google_id
+            return "<users/{$team['google_id']}>";
+        }
+    }
+
+    // If false, return an empty string
+    return ' - ';
 }

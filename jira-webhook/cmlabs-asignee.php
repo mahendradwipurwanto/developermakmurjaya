@@ -1,6 +1,7 @@
 <?php
 
 date_default_timezone_set('Asia/Jakarta');
+header('Content-Type: application/json');
 
 // Include the functions.php file
 require_once '../helpers/functions.php';
@@ -30,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     //use json template-json/assignee-notification.json and replace the values with the extracted data
-    $template = file_get_contents('template-json/assignee-notification.json');
+    $template = file_get_contents('../data/template-json/assignee-notification.json');
 
     //use foreach according to the extracted data
     foreach ($extractedData as $key => $value) {
@@ -50,6 +51,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // check if $key is issue.Story Points estimate then replace 0 as default state
         if ($key == 'issue.Story Points estimate' && empty($value)) {
             $template = str_replace('{{' . $key . '}}', 0, $template);
+            continue;
+        }
+
+        // replace key issue.google.id with get google id, if there is 2 name split by comma, then get google id by name of each name get from issue.assignee.displayName
+        if ($key == 'issue.assignee.displayName') {
+            $value = explode(',', $value);
+            $google_id = '';
+            foreach ($value as $name) {
+                $google_id .= getGoogleId($name) . ', ';
+            }
+            $template = str_replace('{{issue.google.id}}', rtrim($google_id, ', '), $template);
             continue;
         }
 
@@ -91,7 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Close cURL session
     curl_close($ch);
 
-    header('Content-Type: application/json');
     ej($template, false);
 } else {
     // Handle the case where the request method is not POST
