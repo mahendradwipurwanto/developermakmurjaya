@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $webhook_data = [
         'type' => 'review',
-        'project' => 'cmlabs',
-        'url' => $env['CMLABS_WEBHOOK_URL'] ?? null,
-        'logo' => $env['CMLABS_WEBHOOK_LOGO'] ?? null,
+        'project' => 'sequence',
+        'url' => $env['SEQUENCE_WEBHOOK_URL'] ?? null,
+        'logo' => $env['SEQUENCE_WEBHOOK_LOGO'] ?? null,
         'template' => file_get_contents('../data/template-json/review-notification.json')
     ];
 

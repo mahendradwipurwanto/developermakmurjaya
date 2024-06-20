@@ -61,13 +61,13 @@ function replaceTemplate($data): string
 }
 
 //function logs
-function logs($data, $filename = 'logs'): bool
+function logs($data, $project, $filename = 'logs'): bool
 {
     // Create a new log file with the current date and time
     $filename = $filename . '_' . date("His") . '.json';
 
     // make folder path by parent folder year then month then date make it like logs/Y/m/d
-    $folder = '../logs/' . date('Y/m/d/') . $filename . '/';
+    $folder = "../logs/{$project}/" . date('Y/m/d/') . $filename . '/';
 
     // Check if the logs directory exists
     if (!file_exists($folder)) {
@@ -81,14 +81,17 @@ function logs($data, $filename = 'logs'): bool
     return true;
 }
 
-function replaceAttrJira($extractedData, $template)
+function replaceAttrJira($extractedData, $template, $webhook_data = [])
 {
+
+    $template = str_replace('{{project.logo}}', $webhook_data['logo'], $template);
+
     //use foreach according to the extracted data
     foreach ($extractedData as $key => $value) {
         // check if $key is issue.duedate then format the date
         if ($key == 'issue.duedate') {
             if (empty($value)) {
-                $template = str_replace('{{' . $key . '}}', "-", $template);
+                $template = str_replace('{{' . $key . '}}', "ASAP", $template);
             }
 
             $value = date('d F Y', strtotime($value));

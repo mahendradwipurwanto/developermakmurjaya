@@ -7,7 +7,7 @@
         "header": {
           "title": "[{{issue.project.name}}] Task Assigned 🗃️",
           "subtitle": "{{issue.assignee.displayName}} You got new task that need to be done 💪",
-          "imageUrl": "https://lh3.googleusercontent.com/proxy/LASfGKfKJAcrbrYyJrg3Z5WzYXlBhk4K5Up_x3CcV6m1bDoJDwkkaNVXw0pIYqblVGwXNzth284b3Qd8Yp0U6RIzIk0UQFYdeoHOgo6-5Z9nSOYXciqDZtTohknEUqyB",
+          "imageUrl": "{{project.logo}}",
           "imageType": "CIRCLE"
         },
         "sections": [
