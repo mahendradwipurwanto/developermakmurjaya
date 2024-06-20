@@ -56,13 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // replace key issue.google.id with get google id, if there is 2 name split by comma, then get google id by name of each name get from issue.Lead / Reviewers.displayName
         if ($key == 'issue.Lead / Reviewers.displayName') {
-            $value = explode(',', $value);
+            $users = explode(',', $value);
             $google_id = '';
-            foreach ($value as $name) {
+            foreach ($users as $name) {
                 $google_id .= getGoogleId($name) . ', ';
             }
             $template = str_replace('{{issue.google.id}}', rtrim($google_id, ', '), $template);
-            continue;
         }
 
         // check if $value is empty then replace - as default state
