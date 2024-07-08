@@ -1,0 +1,18 @@
+[19-Jun-2024 16:28:56 Asia/Jakarta] PHP Warning:  Array to string conversion in /home/develo12/public_html/helpers/functions.php on line 43
+[19-Jun-2024 16:43:20 Asia/Jakarta] PHP Warning:  Array to string conversion in /home/develo12/public_html/helpers/functions.php on line 43
+[19-Jun-2024 16:43:29 Asia/Jakarta] PHP Warning:  Array to string conversion in /home/develo12/public_html/helpers/functions.php on line 43
+[19-Jun-2024 16:44:04 Asia/Jakarta] PHP Warning:  Array to string conversion in /home/develo12/public_html/helpers/functions.php on line 43
+[19-Jun-2024 16:47:17 Asia/Jakarta] PHP Warning:  Array to string conversion in /home/develo12/public_html/helpers/functions.php on line 43
+[20-Jun-2024 11:30:12 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/develo12/public_html/jira-webhook/cmlabs.php:80) in /home/develo12/public_html/jira-webhook/cmlabs.php on line 94
+[20-Jun-2024 11:31:23 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/develo12/public_html/jira-webhook/cmlabs.php:80) in /home/develo12/public_html/jira-webhook/cmlabs.php on line 94
+[20-Jun-2024 11:36:32 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/develo12/public_html/jira-webhook/cmlabs.php:80) in /home/develo12/public_html/jira-webhook/cmlabs.php on line 94
+[20-Jun-2024 12:15:12 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: str_replace(): Argument #2 ($replace) must be of type string when argument #1 ($search) is a string in /home/develo12/public_html/jira-webhook/cmlabs-assignee.php:72
+Stack trace:
+#0 /home/develo12/public_html/jira-webhook/cmlabs-assignee.php(72): str_replace()
+#1 {main}
+  thrown in /home/develo12/public_html/jira-webhook/cmlabs-assignee.php on line 72
+[20-Jun-2024 12:22:18 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: str_replace(): Argument #2 ($replace) must be of type string when argument #1 ($search) is a string in /home/develo12/public_html/jira-webhook/cmlabs-assignee.php:72
+Stack trace:
+#0 /home/develo12/public_html/jira-webhook/cmlabs-assignee.php(72): str_replace()
+#1 {main}
+  thrown in /home/develo12/public_html/jira-webhook/cmlabs-assignee.php on line 72
