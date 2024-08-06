@@ -41,7 +41,7 @@ jobs:
 
       - name: Push to cPanel
         run: |
-          git remote add cpanel ssh://develo12@developermakmurjaya.my.id:45022/home/develo12/public_html/
+          git remote add cpanel ssh://develo12@developermakmurjaya.my.id:45022/home/develo12/api.developermakmurjaya.my.id
           git push -u cpanel master --force
         continue-on-error: false
 
